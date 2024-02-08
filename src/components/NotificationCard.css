@@ -1,0 +1,147 @@
+.notification-card {
+    border-radius: 12px;
+    margin-bottom: 8px;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.notification-card span {
+    transition: 100ms;
+}
+
+.read {
+    color: var(--clr-dark-grayish-blue);
+}
+
+.unread {
+    color: var(--clr-very-dark-blue);
+    background-color: var(--clr-very-light-grayish-blue);
+}
+
+.notification-card__profile-image,
+.notification-card__postImage {
+    width: 45px;
+    min-width: 45px;
+}
+
+.notification-card__profile-image img,
+.notification-card__postImage img {
+    width: 100%;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.notification-card__postImage img:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.notification-card__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.notification-card__name {
+    color: var(--clr-very-dark-blue);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.notification-card__name:hover {
+    color: var(--clr-blue);
+}
+
+.notification-card__action {
+    color: var(--clr-dark-grayish-blue);
+    font-weight: 500;
+}
+
+.notification-card__extraInfoGroup {
+    color: var(--clr-blue);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.notification-card__extraInfoPost {
+    color: var(--clr-dark-grayish-blue);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.notification-card__extraInfoGroup:hover,
+.notification-card__extraInfoPost:hover {
+    color: var(--clr-blue);
+}
+
+.notification-card__bullet {
+    color: var(--clr-red);
+    font-weight: 800;
+    font-size: var(--size-lg);
+}
+
+.notification-card__time {
+    color: var(--clr-grayish-blue);
+    font-weight: 500;
+}
+
+.notification-card__message {
+    padding: 14px;
+    margin-top: 4px;
+    border: 1px solid var(--clr-light-grayish-blue-2);
+    border-radius: 4px;
+    font-size: var(--size-base);
+    font-weight: 500;
+    cursor: pointer;
+    transition: 100ms;
+}
+
+.notification-card__message:hover {
+    background-color: var(--clr-light-grayish-blue-2);
+}
+
+@media (hover: hover) {
+    .notification-card__postImage img:hover {
+        transform-origin: center;
+        transform: scale(1.05);
+    }
+}
+
+/* xs */
+/* @media (min-width: 475px) {} */
+
+/* sm */
+/* @media (min-width: 640px) {} */
+
+/* md */
+@media (min-width: 868px) {
+    .notification-card {
+        margin-bottom: 10px;
+        padding: 1.2rem;
+        gap: 1.2rem;
+    }
+
+    .notification-card__profile-image,
+    .notification-card__postImage {
+        width: 55px;
+        min-width: 55px;
+    }
+
+    .notification-card__name,
+    .notification-card__action,
+    .notification-card__extraInfoGroup,
+    .notification-card__extraInfoPost {
+        font-size: var(--size-lg);
+    }
+
+    .notification-card__bullet {
+        font-size: var(--size-xl);
+    }
+
+    .notification-card__message {
+        padding: 1rem;
+        margin-top: 8px;
+        font-size: var(--size-lg);
+    }
+}
